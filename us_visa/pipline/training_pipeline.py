@@ -1,5 +1,6 @@
 import sys
 from us_visa.exception import USvisaException
+
 from us_visa.logger import logging
 from us_visa.components.data_ingestion import DataIngestion
 
@@ -27,7 +28,7 @@ class TrainPipeline:
             return data_ingestion_artifact
         except Exception as e:
             raise USvisaException(e, sys) from e
-        
+              
     def run_pipeline(self, ) -> None:
         """
         This method of TrainPipeline class is responsible for running complete pipeline
